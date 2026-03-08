@@ -1,0 +1,42 @@
+<!doctype html>
+
+<!-- this is a project for a class that has me make two fetch requests and display it on my site
+ -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Open-API</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Open-API</h1>
+      <p>
+        Welcome to my Open-API project! This project is designed to provide a
+        comprehensive and user-friendly interface for accessing various APIs.
+      </p>
+    </header>
+    <main>
+      <section id="nasa-content">
+        <h2>API's</h2>
+        <p id="api-data" alt="NASA Astronomy Picture or Video of the Day "></p>
+      </section>
+      <section id="country-content">
+        <h2>Learn more about countries on Earth</h2>
+
+        <input
+          type="text"
+          id="countryInput"
+          placeholder="Enter a country name"
+        />
+        <button id="searchBtn">Search</button>
+
+        <p id="country-description"></p>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
