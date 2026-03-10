@@ -12,11 +12,16 @@ fetch(
     if (data.media_type === "image") {
       const apodImage = document.createElement("img");
       const apodTitle = document.createElement("h2");
+      const apodDescription = document.createElement("p");
+      apodDescription.classList.add("apod-description");
+
+      apodDescription.textContent = data.explanation;
 
       apodImage.src = data.url;
       apodTitle.textContent = data.title;
       nasaContainer.appendChild(apodTitle);
       nasaContainer.appendChild(apodImage);
+      nasaContainer.appendChild(apodDescription);
     }
 
     ///video media type handling
@@ -29,6 +34,7 @@ fetch(
       videoPlayer.src = data.url;
       videoPlayer.controls = true;
       videoPlayer.classList.add("video-player");
+      vdescription.classList.add("video-description");
 
       vdescription.textContent = data.explanation;
       videoTitle.textContent = data.title;
@@ -37,8 +43,9 @@ fetch(
       videoLink.target = "_blank"; // opens in new tab
 
       nasaContainer.appendChild(videoTitle);
-      nasaContainer.appendChild(vdescription);
       nasaContainer.appendChild(videoPlayer);
+      nasaContainer.appendChild(vdescription);
+
       nasaContainer.appendChild(videoLink);
     }
   })
@@ -76,12 +83,11 @@ button.addEventListener("click", () => {
   <p>Timezones: ${countryInfo.timezones.join(", ")}</p>
   <p>Area: ${countryInfo.area} km²</p>
   <p>Calling Codes: ${countryInfo.idd.root}${countryInfo.idd.suffixes[0]}</p>
-  <p>Top Level Domain: ${countryInfo.tld.join(", ")}</p>
-    <p>Bordering Countries: ${countryInfo.borders ? countryInfo.borders.join(", ") : "None"}</p>
-    <p>Independent: ${countryInfo.independent ? "Yes" : "No"}</p>
-    <p>UN Member: ${countryInfo.unMember ? "Yes" : "No"}</p>
-    <p>Start of Week: ${countryInfo.startOfWeek}</p>
-    <p>Maps: <a href="${countryInfo.maps.googleMaps}" target="_blank">Google Maps</a> | <a href="${countryInfo.maps.openStreetMaps}" target="_blank">OpenStreetMap</a></p>
+  <p>Bordering Countries: ${countryInfo.borders ? countryInfo.borders.join(", ") : "None"}</p>
+  <p>Independent: ${countryInfo.independent ? "Yes" : "No"}</p>
+  <p>UN Member: ${countryInfo.unMember ? "Yes" : "No"}</p>
+  <p>Start of Week: ${countryInfo.startOfWeek}</p>
+  <p>Maps: <a href="${countryInfo.maps.googleMaps}" target="_blank">Google Maps</a> | <a href="${countryInfo.maps.openStreetMaps}" target="_blank">OpenStreetMap</a></p>
 
 `;
     })
