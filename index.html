@@ -13,27 +13,33 @@
 
   <body>
     <header>
-      <h1>Open-API</h1>
-      <p>
+      <h1 id="title">Open-API</h1>
+      <p id="description">
         Welcome to my Open-API project! This project is designed to provide a
-        comprehensive and user-friendly interface for accessing various APIs.
+        comprehensive and user-friendly interface for accessing information from
+        earth using various APIs.
       </p>
+      <nav>
+        <ul>
+          <li><a href="#nasa-content">NASA APOD</a></li>
+          <li><a href="#country-content">Learn About a Country</a></li>
+        </ul>
+      </nav>
     </header>
+
     <main>
       <section id="nasa-content">
-        <h2>API's</h2>
+        <h2>Astronomy Picture of the Day</h2>
         <p id="api-data" alt="NASA Astronomy Picture or Video of the Day "></p>
       </section>
       <section id="country-content">
         <h2>Learn more about countries on Earth</h2>
-
         <input
           type="text"
           id="countryInput"
           placeholder="Enter a country name"
         />
         <button id="searchBtn">Search</button>
-
         <p id="country-description"></p>
       </section>
     </main>

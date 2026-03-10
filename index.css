@@ -1,35 +1,93 @@
 html {
   font-family: "Roboto", sans-serif;
-  background-color: rgba(0, 15, 149, 0.317);
+  background: linear-gradient(135deg, #e0f7fa 0%, #81c784 100%);
+  color: #333;
+}
+body {
+  margin: 0;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  background-color: #0c7a12; /* Darker green header */
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  background-color: #18c021b4; /* Rich green nav */
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 50px;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+nav ul li a:hover {
+  color: #c8e6c9;
 }
 
 video,
 img {
-  display: flex;
-  width: 400px;
-  max-width: 600px;
   display: block;
+  width: 400px;
+  max-width: 100%;
+  height: auto;
   margin: 20px auto;
+  border-radius: 10px;
 }
 
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  margin: 20px auto;
-  width: 80%;
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 30px auto;
+  width: 90%;
   max-width: 800px;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #4caf50;
 }
+
 #nasa-content,
 #country-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 20px;
-  text-align: left;
+  text-align: center;
   width: 100%;
-  padding: 10px;
-  background-color: rgba(45, 74, 239, 0.676);
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 20px;
+  background-color: #e3f2fd;
+  border: 1px solid #4caf50;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.apod-description {
+  margin-top: 10px;
+  font-size: 1.1em;
+  color: #000000;
+  line-height: 1.5;
+}
+
+a:hover {
+  text-decoration: underline;
 }
