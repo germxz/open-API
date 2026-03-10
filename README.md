@@ -1,0 +1,1 @@
+This site allows for the user to explore two different API'S. We have the Astronomy picture of the day; which is different everyday. We also have the API that allows for the user to search up any country to find out quick facts. This was made for aliens or humans who are curious about Earth's trends.
